@@ -3,11 +3,15 @@ package com.github.kevin.learning.learning_11;
 import com.baomidou.mybatisplus.annotation.*;
 import com.github.kevin.learning.learning_11.annodation.SensitiveEntity;
 import com.github.kevin.learning.learning_11.annodation.SensitiveField;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @TableName("user")
 @SensitiveEntity
+@NoArgsConstructor
+@AllArgsConstructor
 public class User {
 
     @TableId(type = IdType.AUTO)
