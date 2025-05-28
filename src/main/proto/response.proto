@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package proto;
+
+option java_package = "com.github.kevin.learning.lerning_13";
+option java_outer_classname = "ResponseProto";
+
+message Response {
+  string name = 1;
+  string address = 2;
+  uint32 age = 3;
+}
