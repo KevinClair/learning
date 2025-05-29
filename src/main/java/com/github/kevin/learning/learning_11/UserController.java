@@ -12,7 +12,7 @@ public class UserController {
     private final UserMapper userMapper;
 
     @PostMapping("/save")
-    public User save(@RequestBody User user) {
+    public User save(@RequestBody User user, @RequestParam(required = false) String sign) {
         userMapper.insert(user);
         return user;
     }
@@ -24,7 +24,7 @@ public class UserController {
     }
 
     @GetMapping("/get")
-    public User get(@RequestParam Integer id) {
+    public User get(@RequestParam Integer id, @RequestParam(required = false) String sign) {
         return userMapper.selectById(id);
     }
 }
